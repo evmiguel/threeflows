@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "start": "webpack-dev-server --mode development",
+    "build": "yarn build:prod",
     "dev": "npm-run-all --parallel dev:*",
     "dev:client": "yarn workspace client run dev",
     "dev:server": "yarn workspace server run dev",
