@@ -109,3 +109,20 @@ aws_secret_access_key = <your secret access key id>
 ```
 export AWS_PROFILE=tsl
 ```
+
+## Deployment
+This app is deployed via Heroku. To run the deploy commands, please [install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+
+
+### Staging environment setup
+
+#### Set Heroku as remote repo
+```
+heroku git:remote -a teacher-moments-v2-staging
+git remote rename heroku heroku-staging
+```
+
+#### Deploying to staging
+```
+git push heroku-staging deployment:master
+```
