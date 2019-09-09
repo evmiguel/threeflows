@@ -29,6 +29,7 @@ app.use(
 
 app.use(authRouter);
 app.use('/media', s3Router);
+app.use(express.static('../../dist'));
 
 app.listen(port, () => {
     // eslint-disable-next-line no-console
