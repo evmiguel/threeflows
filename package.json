@@ -24,6 +24,7 @@
     "lint:js": "eslint --ext .json --ext .js . --ignore-pattern 'src/**/*.js'",
     "prettier": "npm-run-all prettier:notSrc && yarn workspaces run prettier",
     "prettier:notSrc": "prettier --write '**/*.js' --ignore-path 'src/**/*.js'",
+    "prod": "yarn workspace client run build:prod",
     "storybook": "yarn workspaces run storybook",
     "test": "yarn workspace test run test"
   },
