@@ -1,0 +1,7 @@
+{
+    "user": "tm",
+    "password": "teachermoments",
+    "database": "teachermoments",
+    "host": "localhost",
+    "port": 5432
+}

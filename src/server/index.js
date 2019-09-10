@@ -16,14 +16,14 @@ const pgSession = require('connect-pg-simple')(session);
 app.use(bodyParser.json());
 app.use(cors());
 
-console.log(getDbConfig());
+const poolConfig = getDbConfig();
 app.use(
     session({
         secret: 'mit tsl teacher moments',
         resave: false,
         saveUninitialized: true,
         store: new pgSession({
-            pool: new Pool(),
+            pool: new Pool(poolConfig),
             tableName: 'session'
         }),
         cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
