@@ -45,8 +45,7 @@ This project uses [Eslint](https://eslint.org/) for linting. To catch syntax and
 
 `yarn lint`
 
-### Local Database Setup
-
+### Database Setup
 - Install PostgreSQL
   - Mac:
   ```
@@ -59,10 +58,22 @@ This project uses [Eslint](https://eslint.org/) for linting. To catch syntax and
   brew services start postgresql
   createdb # creates a default database under your user name
   ```
-- Initialize local database
+
+- Export PostGres variables
+The following variables should be exported and will change from local to staging to production deployment
 
 ```
-yarn db-init-local
+PGUSER=
+PGPASSWORD=
+PGDATABASE=
+PGHOST=
+PGPORT=
+```
+
+- Initialize database
+
+```
+yarn db-init
 ```
 
 ### Creating Database Migrations

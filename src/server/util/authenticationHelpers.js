@@ -3,7 +3,9 @@ const { sql } = require('./sqlHelpers');
 const { saltHashPassword, validateHashPassword } = require('./pwHash');
 const { apiError, asyncMiddleware } = require('./api');
 
-const pool = new Pool();
+const pool = new Pool({
+    ssl: true
+});
 
 const getUserInDatabase = async function(username, email) {
     const client = await pool.connect();

@@ -8,5 +8,15 @@
     "password": "teachermoments",
     "host": "localhost",
     "database": "teachermoments"
+  },
+  "staging" : {
+    "driver": "",
+    "user": "",
+    "password": "",
+    "host": "",
+    "database": "",
+    "addIfNotExists": {
+      "sslmode": "require"
+    }
   }
 }
