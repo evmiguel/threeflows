@@ -1,6 +1,8 @@
 #!/bin/bash
 # Adapted from https://stackoverflow.com/questions/6174220/parse-url-in-shell-script
 
+echo $1
+
 # extract the protocol
 proto="$(echo $1 | grep :// | sed -e's,^\(.*://\).*,\1,g')"
 # remove the protocol
