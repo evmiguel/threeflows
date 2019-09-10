@@ -6,6 +6,7 @@ const { Pool } = require('pg');
 
 const authRouter = require('./service/authentication');
 const s3Router = require('./service/s3');
+const { getDbConfig } = require('./util/dbConfig');
 
 const app = express();
 // Heroku uses $PORT
@@ -15,6 +16,7 @@ const pgSession = require('connect-pg-simple')(session);
 app.use(bodyParser.json());
 app.use(cors());
 
+console.log(getDbConfig());
 app.use(
     session({
         secret: 'mit tsl teacher moments',
