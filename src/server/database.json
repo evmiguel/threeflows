@@ -10,13 +10,11 @@
     "database": "teachermoments"
   },
   "staging" : {
-    "driver": "",
+    "driver": "pg",
     "user": "",
     "password": "",
     "host": "",
     "database": "",
-    "addIfNotExists": {
-      "sslmode": "require"
-    }
+    "ssl": true
   }
 }

@@ -39,7 +39,7 @@ This project uses [Eslint](https://eslint.org/) for linting. To catch syntax and
 
 `yarn lint`
 
-### Database Setup
+### Local Database Setup
 - Install PostgreSQL
   - Mac:
   ```
@@ -110,13 +110,19 @@ This app is deployed via Heroku. To run the deploy commands, please [install Her
 
 ### Staging environment setup
 
-#### Set Heroku as remote repo
+#### Initializing staging database
+*This is a temporary workaround* First, replace the values for user, password, host, and database in `src/server/database.json`. Once those values have been added, run: 
+```
+yarn db-init-staging
+```
+
+#### Set Heroku as remote repo on local machine
 ```
 heroku git:remote -a teacher-moments-v2-staging
 git remote rename heroku heroku-staging
 ```
 
-#### Deploying to staging
+#### Deploying App to staging
 ```
 git push heroku-staging deployment:master
 ```
