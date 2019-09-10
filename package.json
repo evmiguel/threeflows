@@ -10,7 +10,7 @@
     "test"
   ],
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "yarn workspace server run start",
     "build": "yarn workspace client run build:prod",
     "dev": "npm-run-all --parallel dev:*",
     "dev:client": "yarn workspace client run dev",
