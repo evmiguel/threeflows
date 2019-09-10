@@ -56,7 +56,7 @@ This project uses [Eslint](https://eslint.org/) for linting. To catch syntax and
 - Initialize database
 
 ```
-yarn db-init
+yarn db-init-local
 ```
 
 ### Creating Database Migrations
