@@ -12,6 +12,7 @@
   "scripts": {
     "start": "yarn workspace server run start",
     "build": "yarn workspace client run build:prod",
+    "deploy:staging": "git push heroku-staging deployment:master",
     "dev": "npm-run-all --parallel dev:*",
     "dev:client": "yarn workspace client run dev",
     "dev:server": "yarn workspace server run dev",

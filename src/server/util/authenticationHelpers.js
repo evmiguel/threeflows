@@ -2,10 +2,10 @@ const { Pool } = require('pg');
 const { sql } = require('./sqlHelpers');
 const { saltHashPassword, validateHashPassword } = require('./pwHash');
 const { apiError, asyncMiddleware } = require('./api');
+const { getDbConfig } = require('./dbConfig');
 
-const pool = new Pool({
-    ssl: true
-});
+const dbConfig = getDbConfig();
+const pool = new Pool(dbConfig);
 
 const getUserInDatabase = async function(username, email) {
     const client = await pool.connect();

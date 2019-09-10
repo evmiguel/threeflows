@@ -17,12 +17,6 @@ Follow the instructions here: [https://github.com/bocoup/threeflows#local-databa
 
 This is the list of all environment variables that should be exported prior to running the Teacher Moments server in the command line:
 ```
-export PGUSER=
-export PGPASSWORD=
-export PGDATABASE=
-export PGHOST=
-export PGPORT=
-
 # If AWS credentials are stored in profiles
 export AWS_PROFILE=
 export S3_BUCKET=
@@ -58,18 +52,7 @@ This project uses [Eslint](https://eslint.org/) for linting. To catch syntax and
   brew services start postgresql
   createdb # creates a default database under your user name
   ```
-
-- Export PostGres variables
-The following variables should be exported and will change from local to staging to production deployment
-
-```
-PGUSER=
-PGPASSWORD=
-PGDATABASE=
-PGHOST=
-PGPORT=
-```
-
+  
 - Initialize database
 
 ```

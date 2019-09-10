@@ -14,7 +14,8 @@ exports.getDbConfig = function() {
             // the database name is included in the pathname
             //  the pathname string starts with a  '/', so to
             //  get the database name, take the subtring
-            database: pathname.substring(1)
+            database: pathname.substring(1),
+            ssl: true
         }
     }
     
