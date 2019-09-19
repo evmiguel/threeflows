@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Dropdown } from 'semantic-ui-react';
-import './slideHolder.css';
+import './thumbnailContainer.css';
 
 const dropDownValues = [
     {
@@ -25,7 +25,7 @@ const dropDownValues = [
     }
 ];
 
-export const SlideHolder = props => (
+export const ThumbnailContainer = props => (
     <Grid.Column width={props.width} className="slide_holder" padded={false}>
         <Grid.Row className="dropdown_container">
             <Dropdown
