@@ -1,6 +1,8 @@
 import React from 'react';
 import { Grid, Dropdown } from 'semantic-ui-react';
 import './thumbnailContainer.css';
+import 'semantic-ui-css/semantic.min.css';
+
 
 const dropDownValues = [
     {
@@ -26,7 +28,8 @@ const dropDownValues = [
 ];
 
 export const ThumbnailContainer = props => (
-    <Grid.Column width={props.width} className="slide_holder" padded={false}>
+    // This can be red?????
+    <Grid.Column width={props.width} className="thumbnail_container" padded={false} >
         <Grid.Row className="dropdown_container">
             <Dropdown
                 selection
@@ -34,6 +37,14 @@ export const ThumbnailContainer = props => (
                 fluid
                 options={dropDownValues}
             />
+        </Grid.Row>
+        <Grid.Row className="thumbnail_gallery">
+            {/* Why is this not red */}
+            <Grid.Row style={{height: '25px'}}>
+                <Grid.Column>
+                    THUMBNAIL
+                </Grid.Column>
+            </Grid.Row>
         </Grid.Row>
     </Grid.Column>
 );

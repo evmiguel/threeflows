@@ -4,7 +4,7 @@ import { ThumbnailContainer } from '@components/thumbnailContainer';
 import './editor.css';
 
 export const Editor = () => (
-    <Grid divided="vertically">
+    <Grid divided="vertically" className="editor">
         <ThumbnailContainer width={4} />
         <Grid.Column width={12} color="blue">
             SLIDE EDITOR
