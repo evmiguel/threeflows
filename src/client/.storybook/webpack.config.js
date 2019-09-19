@@ -27,8 +27,8 @@ module.exports = {
     },
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, '../'),
-            '@components': path.resolve(__dirname, '../components'),
+            '@client': path.resolve(__dirname, '../'),
+            '@components': path.resolve(__dirname, '../components')
         },
         extensions: ['*', '.js', '.jsx']
     }

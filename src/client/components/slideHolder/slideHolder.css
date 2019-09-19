@@ -1,0 +1,9 @@
+.dropdown_container {
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.slide_holder {
+    padding-right: 0px !important;
+}
