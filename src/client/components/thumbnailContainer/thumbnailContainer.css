@@ -11,7 +11,6 @@
 
 .thumbnail_gallery {
     padding: 1rem;
-    background-color: yellow;
     overflow: auto;
     height: calc(100% - 67px); /* basing height based on dropdown_container */
 }

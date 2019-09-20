@@ -1,5 +1,7 @@
 import React from 'react';
 import { Grid, Dropdown } from 'semantic-ui-react';
+import { ThumbnailGallery } from '@components/thumbnailGallery';
+import { Thumbnail } from '@components/thumbnail';
 import './thumbnailContainer.css';
 import 'semantic-ui-css/semantic.min.css';
 
@@ -28,7 +30,6 @@ const dropDownValues = [
 ];
 
 export const ThumbnailContainer = props => (
-    // This can be red?????
     <Grid.Column width={props.width} className="thumbnail_container" padded={false} >
         <Grid.Row className="dropdown_container">
             <Dropdown
@@ -38,97 +39,8 @@ export const ThumbnailContainer = props => (
                 options={dropDownValues}
             />
         </Grid.Row>
-        <Grid.Row className="thumbnail_gallery">
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-            <Grid.Row className="thumbnail_row" style={{backgroundColor: 'red', height: '50px'}}>
-                <Grid.Column className='thumbnail'>
-                    THUMBNAIL
-                </Grid.Column>
-            </Grid.Row>
-        </Grid.Row>
+        <ThumbnailGallery>
+            {new Array(25).fill(0,0,25).map(i => <Thumbnail />)}
+        </ThumbnailGallery>
     </Grid.Column>
 );
