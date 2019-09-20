@@ -1,27 +1,17 @@
-.dropdown_container {
-    border-bottom: 1px solid #e8e8e8;
-    height: 15%;
-    display: flex;
-    align-items: center;
-}
-
-.add_dropdown {
-    width: 95% !important;
-    margin: 0 auto;
-}
-
 .thumbnail_container {
     padding-right: 0px !important;
     height: 100%;
+}
+
+.dropdown_container {
+    padding: 1rem;
+    border-bottom: 1px solid #e8e8e8;
+    max-height: 67px; /* setting this statically */
 }
 
 .thumbnail_gallery {
     padding: 1rem;
     background-color: yellow;
     overflow: auto;
-    height: 85%;
-}
-
-.thumbnail_row {
-    
+    height: calc(100% - 67px); /* basing height based on dropdown_container */
 }
