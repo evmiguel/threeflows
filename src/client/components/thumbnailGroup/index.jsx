@@ -9,4 +9,3 @@ export const ThumbnailGroup = props => (
         {props.children}
     </Grid.Row>
 );
-
