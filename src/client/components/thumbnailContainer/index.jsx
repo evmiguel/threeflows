@@ -36,12 +36,12 @@ export const ThumbnailContainer = props => (
                 placeholder="Add +"
                 fluid
                 options={dropDownValues}
+                className="add_dropdown"
             />
         </Grid.Row>
         <Grid.Row className="thumbnail_gallery">
-            {/* Why is this not red */}
-            <Grid.Row style={{height: '25px'}}>
-                <Grid.Column>
+            <Grid.Row className="thumbnail_row">
+                <Grid.Column className='thumbnail' style={{backgroundColor: 'red'}}>
                     THUMBNAIL
                 </Grid.Column>
             </Grid.Row>

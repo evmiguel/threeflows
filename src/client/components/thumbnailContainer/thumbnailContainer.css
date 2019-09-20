@@ -1,7 +1,13 @@
 .dropdown_container {
-    width: 100%;
-    padding: 1rem;
     border-bottom: 1px solid #e8e8e8;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.add_dropdown {
+    width: 95% !important;
+    margin: 0 auto;
 }
 
 .thumbnail_container {
@@ -11,5 +17,11 @@
 
 .thumbnail_gallery {
     padding: 1rem;
-    height: 80%;
+    background-color: yellow;
+    overflow: auto;
+    height: 85%;
+}
+
+.thumbnail_row {
+    
 }
