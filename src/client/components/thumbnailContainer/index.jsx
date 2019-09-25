@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Grid, Dropdown } from 'semantic-ui-react';
 import { ThumbnailGallery } from '@components/thumbnailGallery';
 import { ThumbnailGroup } from '@components/thumbnailGroup';
@@ -36,12 +37,8 @@ const getRandArr = () => {
     return new Array(n).fill(0, 0, n);
 };
 
-export const ThumbnailContainer = props => (
-    <Grid.Column
-        width={props.width}
-        className="thumbnail_container"
-        padded={false}
-    >
+export const ThumbnailContainer = ({ width }) => (
+    <Grid.Column width={width} className="thumbnail_container" padded={false}>
         <Grid.Row className="dropdown_container">
             <Dropdown
                 selection
@@ -52,12 +49,16 @@ export const ThumbnailContainer = props => (
         </Grid.Row>
         <ThumbnailGallery>
             {dropDownValues.map(v => (
-                <ThumbnailGroup title={v.text}>
-                    {getRandArr().map(i => (
-                        <Thumbnail />
+                <ThumbnailGroup title={v.text} key={v}>
+                    {getRandArr().map((i, index) => (
+                        <Thumbnail key={index} />
                     ))}
                 </ThumbnailGroup>
             ))}
         </ThumbnailGallery>
     </Grid.Column>
 );
+
+ThumbnailContainer.propTypes = {
+    width: PropTypes.number
+};

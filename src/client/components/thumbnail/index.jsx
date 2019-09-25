@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 
-export const Thumbnail = props => (
+export const Thumbnail = () => (
     <Grid.Row
         className="thumbnail_row"
         style={{ backgroundColor: 'red', height: '50px' }}

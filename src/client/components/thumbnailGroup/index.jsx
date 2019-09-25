@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Grid } from 'semantic-ui-react';
-import { Thumbnail } from '@components/thumbnail';
 import { ThumbnailGroupTitle } from '@components/thumbnailGroupTitle';
 
-export const ThumbnailGroup = props => (
+export const ThumbnailGroup = ({ title, children }) => (
     <Grid.Row>
-        <ThumbnailGroupTitle title={props.title} />
-        {props.children}
+        <ThumbnailGroupTitle title={title} />
+        {children}
     </Grid.Row>
 );
+
+ThumbnailGroup.propTypes = {
+    title: PropTypes.string,
+    children: PropTypes.element
+};
