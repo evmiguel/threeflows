@@ -1,6 +1,11 @@
 .thumbnail_container {
-    padding-right: 0px !important;
+    padding-right: 0;
     height: 100%;
+}
+
+/* override css from grid framework */
+.ui.grid > .column.thumbnail_container {
+    padding-right: 0;
 }
 
 .dropdown_container {
