@@ -93,7 +93,8 @@ export default class SlideEditor extends React.Component {
                                 />
                             );
                             const deleteButton = (
-                                <Button floated="right"
+                                <Button
+                                    floated="right"
                                     icon="close"
                                     className="tm__component-delete-button"
                                     onClick={() =>
