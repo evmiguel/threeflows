@@ -92,8 +92,8 @@ export default class SlideEditor extends React.Component {
                                 />
                             );
                             const deleteButton = (
-                                <Button
-                                    icon="trash alternate outline icon"
+                                <Button floated="right"
+                                    icon="close"
                                     onClick={() =>
                                         this.onDeleteComponent(index)
                                     }
@@ -108,7 +108,10 @@ export default class SlideEditor extends React.Component {
                                             {
                                                 menuItem: 'Edit',
                                                 render: () => (
-                                                    <Tab.Pane>{edit}</Tab.Pane>
+                                                    <Tab.Pane>
+                                                        {edit}
+                                                        {deleteButton}
+                                                    </Tab.Pane>
                                                 )
                                             },
                                             {
@@ -116,16 +119,6 @@ export default class SlideEditor extends React.Component {
                                                 render: () => (
                                                     <Tab.Pane>
                                                         {display}
-                                                    </Tab.Pane>
-                                                )
-                                            },
-                                            {
-                                                menuItem: 'Delete',
-                                                render: () => (
-                                                    <Tab.Pane>
-                                                        Are you sure you want to
-                                                        delete this component?
-                                                        {deleteButton}
                                                     </Tab.Pane>
                                                 )
                                             }
