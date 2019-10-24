@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Grid, Label, Input, Menu, Tab, Button } from 'semantic-ui-react';
 
 import * as Components from '../Components';
+import './Editor.css';
 
 const ComponentsMenuOrder = [
     'Text',
@@ -94,6 +95,7 @@ export default class SlideEditor extends React.Component {
                             const deleteButton = (
                                 <Button floated="right"
                                     icon="close"
+                                    className="tm__component-delete-button"
                                     onClick={() =>
                                         this.onDeleteComponent(index)
                                     }
@@ -108,7 +110,7 @@ export default class SlideEditor extends React.Component {
                                             {
                                                 menuItem: 'Edit',
                                                 render: () => (
-                                                    <Tab.Pane>
+                                                    <Tab.Pane className="tm__edit-pane">
                                                         {edit}
                                                         {deleteButton}
                                                     </Tab.Pane>
